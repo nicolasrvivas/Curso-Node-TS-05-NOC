@@ -14,12 +14,13 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     //"module": "CommonJS",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "esnext",
+    //"moduleResolution": "nodenext",
     "target": "esnext",
     //"types": [],
     "types": [
-      "node"
+      "node",
+      "jest"
     ],
     "esModuleInterop": true,
     // For nodejs:

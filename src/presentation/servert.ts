@@ -1,4 +1,4 @@
-import { envs } from "../config/plugins/envs.plugins";
+import { envs } from "../config/plugins/envs.plugin";
 import { LogSeverityLevel } from "../domain/entities/log.entity";
 import { CheckService } from "../domain/use-cases/checks/check-service";
 import { CheckServiceMultiple } from "../domain/use-cases/checks/check-service-multiple";

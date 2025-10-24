@@ -1,7 +1,6 @@
-import { PrismaClient } from "@prisma/client";
 import { LogDataSource } from "../../domain/datasources/log.datasource";
 import { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity";
-import { SeverityLevel } from "@prisma/client";
+import { PrismaClient, SeverityLevel } from "../../generated/prisma/client";
 
 const prismaClient = new PrismaClient();
 

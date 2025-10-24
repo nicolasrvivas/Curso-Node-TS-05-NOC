@@ -10,7 +10,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
+      - ./mongo:/data/db
     healthcheck:
       test: ["CMD-SHELL", "mongosh --eval 'db.runCommand({ ping: 1 })' || exit 1"]
       interval: 10s
@@ -30,7 +30,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres:/var/lib/postgresql/data
       # Si quieres scripts de inicialización (SQL/SH):
       # - ./postgres-init:/docker-entrypoint-initdb.d:ro
     healthcheck:
@@ -40,5 +40,5 @@ services:
       retries: 20
 
 volumes:
-  mongo_data:
-  postgres_data:
+  mongo:
+  postgres:
